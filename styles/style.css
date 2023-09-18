@@ -1,0 +1,66 @@
+/* Root */
+:root{
+    --light-font: 300;
+    --regular-font: 400;
+    --bold-font: 700;
+}
+
+/* All general main */
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Text styles */
+.div__texto {
+    width: 20%;
+    min-width: 30rem;
+    height: auto;
+    /* background-color: blue; */
+}
+.div__h2--texto {
+    font-size: 3.3rem;
+    font-weight: var(--regular-font);
+    margin-bottom: 2rem;
+}
+.h2__a--texto{
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+    padding-bottom: 15.5px;
+    --bg-h: 3px;
+}
+.h2__a--texto:where(:hover, :focus-visible){
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+.div__p--texto {
+    font-size: 1.5rem;
+    font-weight: var(--light-font);
+    line-height: 2rem;
+}
+.p__a--texto {
+    font-weight: var(--bold-font);
+
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 350ms;
+    --bg-h: 100%;
+    padding-bottom: 2px;
+    --bg-h: 2px;
+}   
+.p__a--texto:where(:hover, :focus-visible){
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+/* Images styles */
+.a__img--music{
+    width: 40rem;
+    height: 30rem;
+}

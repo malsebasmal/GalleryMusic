@@ -1,0 +1,67 @@
+/* Root */
+:root{
+    --light-font: 300;
+    --regular-font: 400;
+    --bold-font: 700;
+}
+
+/* All general main */
+.main{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text and Video styles */
+.main__div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.div__texto {
+    width: 25%;
+    min-width: 40rem;
+    height: auto;
+}
+.h1__texto {
+    font-size: clamp(3.5em, 4vw, 4em);
+    font-weight: var(--regular-font);
+    margin-bottom: 1.6rem;
+}
+.p__texto {
+    font-size: clamp(1em, 3vw, 1.5em);
+    font-weight: var(--light-font);
+}
+.div__inframe {
+    width: 60rem;
+    height: auto;
+}
+
+/* Button styles */
+.a{
+    width: 15rem;
+    height: auto;
+
+    font-size: 1.5em;
+    font-weight: var(--light-font);
+
+    margin-top: 5rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+
+    transition: all ease 0.2s;
+    border: 1.5px solid #000;
+    border-radius: 1.5rem;
+}
+
+.a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}

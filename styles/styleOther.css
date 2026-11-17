@@ -1,14 +1,15 @@
 /* Root */
-:root{
+:root {
     --light-font: 300;
     --regular-font: 400;
     --bold-font: 700;
 }
 
 /* All general main */
-.main{
-    width: 100vw;
-    height: 100vh;
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 2rem;
 
     display: flex;
     flex-direction: column;
@@ -18,42 +19,62 @@
 }
 
 /* Text and Video styles */
-.main__div{
+.main__div {
+    width: 100%;
+    max-width: 120rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-}
-.div__texto {
-    width: 25%;
-    min-width: 40rem;
-    height: auto;
-}
-.h1__texto {
-    font-size: clamp(3.5em, 4vw, 4em);
-    font-weight: var(--regular-font);
-    margin-bottom: 1.6rem;
-}
-.p__texto {
-    font-size: clamp(1em, 3vw, 1.5em);
-    font-weight: var(--light-font);
-}
-.div__inframe {
-    width: 60rem;
-    height: auto;
-    margin-top: 2rem;
+    gap: 3rem;
 }
 
-/* Button styles */
-.a{
+.div__texto {
+    width: 35%;
+    min-width: min(35rem, 100%);
+    height: auto;
+}
+
+.h1__texto {
+    font-size: clamp(2.8rem, 4vw, 4rem);
+    font-weight: var(--regular-font);
+    margin-bottom: 1.6rem;
+    line-height: 1.2;
+}
+
+.p__texto {
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+    font-weight: var(--light-font);
+    line-height: 1.7;
+}
+
+/* Contenedor del video con el mismo estilo de sombra/borde de tus cards */
+.div__inframe {
+    width: 55%;
+    max-width: 60rem;
+    min-width: min(32rem, 100%);
+    aspect-ratio: 16 / 9;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.div__inframe iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Button styles (tu mismo estilo original) */
+.a {
     width: 15rem;
     height: auto;
 
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: var(--light-font);
 
     margin-top: 5rem;
-    padding: 0.5rem;
+    padding: 0.8rem 1.2rem;
 
     display: flex;
     justify-content: center;
@@ -63,22 +84,27 @@
     border-radius: 1.5rem;
 }
 
-.a:hover{
+.a:hover {
     transform: translateY(-5px);
     box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px){
-    .div__texto{
-        min-width: 90vw;
-        height: auto;
+/* Adaptación fluida para tablets y celulares */
+@media screen and (max-width: 850px) {
+    .main__div {
+        flex-direction: column;
     }
 
-    .p__texto{
-        font-size: 1.5em;
-    }
-
-    .div__inframe{
+    .div__texto {
         width: 90vw;
+        max-width: 60rem;
+    }
+
+    .div__inframe {
+        width: 90vw;
+    }
+
+    .a {
+        margin-top: 3.5rem;
     }
 }

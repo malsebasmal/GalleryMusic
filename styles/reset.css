@@ -12,6 +12,7 @@
 /* Aquí definimos las Custom properties */
 :root {
   --blanco: #ffffff;
+  --negro: #000000;
   /* Tipografía */
   --tipo-principal: 'Azeret Mono', monospace;
   --tipo-secundaria: 'Lexend', sans-serif;
